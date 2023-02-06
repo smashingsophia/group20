@@ -88,8 +88,15 @@ def rivers_by_station_number(stations,N):
             
     return nlist
     
-
-
+def inconsistent_typical_range_stations(stations):
+    liststation = []
+    for station in stations:
+        if inconsistent_typical_range_stations() == False:
+            liststation.append(station.name)
+    liststation.sort()
+    return liststation
+    
+            
     
         
     
