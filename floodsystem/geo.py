@@ -67,3 +67,29 @@ def stations_by_river(stations):
 
     return rivers_dictionary
     
+    
+def rivers_by_station_number(stations,N):
+    map = {}
+    for river in stations:
+        if river.river in map:
+            map[river.river] += 1
+        else:
+            map[river.river] = 1 #for non-existing keys it just creates one
+    riverlist = [(river, number) for river, number in map.items()]
+    riverlist.sort(key=lambda x: x[1], reverse=True)
+    nlist = riverlist[:N]
+    i = N
+    flag = True
+    while i<len(riverlist) and flag == True:
+        if riverlist[i] == riverlist[N-1]:
+            nlist.append(riverlist[i])
+        else:
+            flag = False
+            
+    return nlist
+    
+
+
+    
+        
+    
