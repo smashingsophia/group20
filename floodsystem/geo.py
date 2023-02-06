@@ -26,3 +26,16 @@ def stations_by_distance(stations, p):
     return station_distance
 
 
+
+
+def stations_within_radius(stations, centre, r):
+    stations_in_radius = []
+    
+    for station in stations:
+        coord= station.coord
+        distance= haversine(centre, coord)
+        
+        if distance <= r:
+            stations_in_radius.append(station)
+            
+    return stations_in_radius

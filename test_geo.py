@@ -23,5 +23,3 @@ def test_stations_by_distance():
     
     
 test_stations_by_distance()
-    
-        
