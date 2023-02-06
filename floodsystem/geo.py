@@ -6,9 +6,7 @@ geographical data.
 
 """
 
-from .utils import sorted_by_key  # noqa
-
-
+from floodsystem.utils import sorted_by_key #noqa
 from haversine import haversine
 
 def stations_by_distance(stations, p):
@@ -30,12 +28,15 @@ def stations_by_distance(stations, p):
 
 def stations_within_radius(stations, centre, r):
     stations_in_radius = []
-    
+
     for station in stations:
-        coord= station.coord
-        distance= haversine(centre, coord)
+        coord = station.coord
+        distance = haversine(centre, coord)
         
         if distance <= r:
-            stations_in_radius.append(station)
+            stations_in_radius.append(station)     
+            
+        else:
+            continue           
             
     return stations_in_radius
