@@ -40,3 +40,30 @@ def stations_within_radius(stations, centre, r):
             continue           
             
     return stations_in_radius
+
+
+
+def rivers_with_station(stations):
+    river_names = set()
+       
+    for station in stations:
+        river_names.add(station.river)
+
+    
+    set(river_names)
+    
+    return river_names
+        
+        
+def stations_by_river(stations):
+    rivers_dictionary = {}
+
+    for station in stations:
+        if station.river not in rivers_dictionary:
+            rivers_dictionary[station.river]= [station.name]
+            
+        else:
+            rivers_dictionary[station.river].append(station.name)
+
+    return rivers_dictionary
+    
