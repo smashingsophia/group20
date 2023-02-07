@@ -107,4 +107,5 @@ def test_rivers_by_station_number():
     x = rivers_by_station_number(Test_station_list,1)
     
     assert type(x) == list
+    
 test_rivers_by_station_number()

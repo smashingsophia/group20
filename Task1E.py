@@ -3,7 +3,12 @@ from floodsystem.geo import rivers_by_station_number
 
 def run():
     stations = build_station_list()
-    rivers = rivers_by_station_number(stations,9)
-    print(rivers)
+    N = 9
     
+    N_stations = rivers_by_station_number(stations, N)
+    
+    print(N_stations)
+
+
 run()
+
