@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Deliverable 1 code
         run: |
-          python Task1A.py Task1B.py Task1C.py Task1D.py
+          python Task1A.py Task1B.py Task1C.py Task1D.py Task1E.py Task1F.py
 
       - name: Run Deliverable 2 code
         run: |
