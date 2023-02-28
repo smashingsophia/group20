@@ -5,6 +5,8 @@ from floodsystem.datafetcher import fetch_measure_levels
 from floodsystem.flood import stations_highest_rel_level
 from floodsystem.plot import plot_water_level_with_fit
 from floodsystem.stationdata import build_station_list,update_water_levels
+
+
 stations = build_station_list()[:30]
 severe = []
 high = []
@@ -27,6 +29,9 @@ for station in stations:
     else:
         moderate.append(station.town)
 print('severe:',severe, 'high:',high, 'moderate:',moderate, 'low:',low)
+    
+    
+
     
     
         
