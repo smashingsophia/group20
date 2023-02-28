@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 """Unit test for the station module"""
 
-from floodsystem.station import MonitoringStation
+from floodsystem.station import MonitoringStation, update_water_levels
 
 
 def test_create_monitoring_station():
@@ -39,6 +39,7 @@ def test_relative_water_level():
     town = "My Town"
     latest_level = None
     s = MonitoringStation(s_id, m_id, label, coord, trange, river, town)
+    update_water_levels(s)
 
     x = MonitoringStation.relative_water_level(s)
 
