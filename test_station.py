@@ -37,6 +37,7 @@ def test_relative_water_level():
     trange = (-2.3, 3.4445)
     river = "River X"
     town = "My Town"
+    latest_level = None
     s = MonitoringStation(s_id, m_id, label, coord, trange, river, town)
 
     x = MonitoringStation.relative_water_level(s)
