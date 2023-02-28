@@ -3,8 +3,7 @@
 # SPDX-License-Identifier: MIT
 """Unit test for the stationdata module"""
 
-from floodsystem.stationdata import build_station_list, update_water_levels
-
+from floodsystem.stationdata import build_station_list
 
 def test_build_station_list():
     """Test building list of stations"""
