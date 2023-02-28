@@ -29,3 +29,16 @@ def test_create_monitoring_station():
     
 
     
+def test_relative_water_level():
+    s_id = "test-s-id"
+    m_id = "test-m-id"
+    label = "some station"
+    coord = (-2.0, 4.0)
+    trange = (-2.3, 3.4445)
+    river = "River X"
+    town = "My Town"
+    s = MonitoringStation(s_id, m_id, label, coord, trange, river, town)
+
+    x = MonitoringStation.relative_water_level(s)
+
+    assert type(x) == None
